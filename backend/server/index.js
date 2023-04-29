@@ -12,7 +12,7 @@ const auth = require('./auth');
 const User = require('./userModel');
 const { request } = require("http");
 const model = require("./userModel");
-const cors = require('cors');
+// const cors = require('cors');
 
 
 
@@ -26,7 +26,7 @@ app.listen(PORT, () => {
 
 dbConnect();
 
-app.use(cors());
+// app.use(cors());
 
 
 app.use(express.json());
@@ -34,17 +34,16 @@ app.use(express.urlencoded({extended:false}));
 
 //Curb Cores Error by adding a header here
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PUT, DELETE, PATCH, OPTIONS"
-    );
-    next();
-});
+    const allowedOrigins =['http://localhost:3001', 'http://localhost:3000','http://b-rwaler.onrender.com', 'https://b-rwaler.onrender.com'];
+    const origin = req.headers.origin;
+      if (allowedOrigins.includes(origin)) {
+           res.setHeader('Access-Control-Allow-Origin', origin);
+      }
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+      res.header("Access-Control-Allow-credentials", true);
+      res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
+      next();
+    });
 
 
 
