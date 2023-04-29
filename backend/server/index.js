@@ -1,7 +1,9 @@
 const express = require("express");
 const dbConnect = require("./DBConnect");
 const libgen = require('libgen');
-const PORT = process.env.PORT || 3001;
+const dotenv= require('dotenv');
+dotenv.config();
+const PORT = process.env.PORT;
 
 const app = express();
 const bcrypt = require("bcrypt");
