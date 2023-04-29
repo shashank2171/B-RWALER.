@@ -2,7 +2,7 @@ const express = require("express");
 const dbConnect = require("./DBConnect");
 const libgen = require('libgen');
 
-const PORT = 10001;
+const PORT = 3001;
 
 const app = express();
 const bcrypt = require("bcrypt");
