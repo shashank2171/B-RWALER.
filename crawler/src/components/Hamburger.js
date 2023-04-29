@@ -64,7 +64,7 @@ const Hamburger = ({ state }) => {
       
     const configuration = {
       method: "post",
-      url: "http://localhost:3001/add",
+      url: "https://b-rwaler.onrender.com/add",
       data: {
         email,
         meth,
@@ -88,7 +88,7 @@ const Hamburger = ({ state }) => {
         const meth = 'read';
         const configuration = {
             method: "post",
-            url: "http://localhost:3001/add",
+            url: "https://b-rwaler.onrender.com/add",
             data: {
               email,
               meth,
@@ -139,7 +139,7 @@ const Hamburger = ({ state }) => {
       const meth = 'read';
       const configuration = {
           method: "post",
-          url: "http://localhost:3001/add",
+          url: "https://b-rwaler.onrender.com/add",
           data: {
             email,
             meth,
