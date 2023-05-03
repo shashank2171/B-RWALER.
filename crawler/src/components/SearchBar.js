@@ -149,7 +149,7 @@ function SearchBar() {
     let k = res.data[Number(last[3])];
     const configuration = {
       method: "post",
-      url: "https://b-rwaler.onrender.com/add",
+      url: "https://brawler-server.onrender.com/add",
       data: {
         email,
         k,
@@ -176,7 +176,7 @@ function SearchBar() {
     
             const configuration = {
                 method: "post",
-                url: "https://b-rwaler.onrender.com/search",
+                url: "https://brawler-server.onrender.com/search",
                 data: {query}
             };
     
