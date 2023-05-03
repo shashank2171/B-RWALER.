@@ -91,7 +91,7 @@ function SignInForm() {
 
   const configuration = {
     method: "post",
-    url: "https://b-rwaler.onrender.com/login",
+    url: "https://brawler-server.onrender.com/login",
     data: formValues,
   };
 
