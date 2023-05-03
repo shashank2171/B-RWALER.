@@ -76,7 +76,7 @@ function SignUpForm() {
 
   const configuration = {
     method: "post",
-    url: "https://b-rwaler.onrender.com/register",
+    url: "https://brawler-server.onrender.com/register",
     data: formValues,
   };
 
